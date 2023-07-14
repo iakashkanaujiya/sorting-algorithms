@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/main.css">
+    <title>Selection Sort</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="container p-5">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Sorting Algorithms</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link nav-active" href="bubble-sort.html">Bubble Sort</a>
+                            <a class="nav-link" href="selection-sort.html">Selection Sort</a>
+                            <a class="nav-link" href="insertion-sort.html">Insertion Sort</a>
+                            <a class="nav-link" href="quick-sort.html">Quick Sort</a>
+                            <a class="nav-link" href="merge-sort.html">Merge Sort</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container p-5">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Selection Sort
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            Selection sort is a simple and efficient sorting algorithm that works by repeatedly
+                            selecting the smallest (or largest)
+                            element from the unsorted portion of the list and moving it to the sorted portion of the
+                            list.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Algorithm
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Lets consider the following array as an example: arr[] = {64, 25, 12, 22, 11}
+                            <ul>
+                                <li>First pass:</li>
+                                <ul>
+                                    <li>For the first position in the sorted array, the whole array is traversed from
+                                        index 0 to 4 sequentially. The first
+                                        position where 64 is stored presently, after traversing whole array it is clear
+                                        that 11 is the lowest value.</li>
+                                    <li>Thus, replace 64 with 11. After one iteration 11, which happens to be the least
+                                        value in the array, tends to appear
+                                        in
+                                        the first position of the sorted list.</li>
+                                </ul>
+                                <li>Second Pass:</li>
+                                <ul>
+                                    <li>For the second position, where 25 is present, again traverse the rest of the
+                                        array in a sequential manner.</li>
+                                    <li>After traversing, we found that 12 is the second lowest value in the array and
+                                        it should appear at the second place in
+                                        the array, thus swap these values.</li>
+                                </ul>
+                                <li>Third Pass:</li>
+                                <ul>
+                                    <li>Now, for third place, where 25 is present again traverse the rest of the array
+                                        and find the third least value present in
+                                        the array.
+                                    </li>
+                                    <li>
+                                        While traversing, 22 came out to be the third least value and it should appear
+                                        at the third place in the array, thus
+                                        swap 22 with element present at third position.
+                                    </li>
+                                </ul>
+                                <li>Fourth pass:</li>
+                                <ul>
+                                    <li>Similarly, for fourth position traverse the rest of the array and find the fourth least element in the array</li>
+                                    <li>As 25 is the 4th lowest value hence, it will place at the fourth position.</li>
+                                </ul>
+                                <li>Fifth Pass:</li>
+                                <ul>
+                                    <li>At last the largest value present in the array automatically get placed at the last position in the array</li>
+                                    <li>The resulted array is the sorted array.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Complexity Analysis
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Time Complexity:</li>
+                                <ul>
+                                    <li>Best Case: O(N^2)</li>
+                                    <li>Average Case: O(N^2)</li>
+                                    <li>Worst Case: O(N^2)</li>
+                                </ul>
+                                <li>Auxiliary Space: O(1)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="arr-data" class="row py-5 px-2 text-center justify-content-center">
+                <div id="col-1" class="col-1 animation" contenteditable=true>22</div>
+                <div id="col-2" class="col-1 animation" contenteditable=true>12</div>
+                <div id="col-3" class="col-1 animation" contenteditable=true>32</div>
+                <div id="col-4" class="col-1 animation" contenteditable=true>45</div>
+                <div id="col-5" class="col-1 animation" contenteditable=true>52</div>
+                <div id="col-6" class="col-1 animation" contenteditable=true>68</div>
+                <div id="col-7" class="col-1 animation" contenteditable=true>71</div>
+                <div id="col-8" class="col-1 animation" contenteditable=true>13</div>
+                <div id="col-9" class="col-1 animation" contenteditable=true>19</div>
+                <div id="col-10" class="col-1 animation" contenteditable=true>3</div>
+            </div>
+            <div class="container p-5 text-center">
+                <button onclick="selectionSort()" id="sort-btn" class="my-btn">
+                    Click To Sort
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center p-5">
+        <p>Made with
+            &hearts;
+            by
+            <a class="link-opacity-100 link-opacity-50-hover"
+                href="https://www.linkedin.com/in/akash-kanaujiya-9377b7216/">Akash Kanaujiya</a>
+        </p>
+    </div>
+    <script src="../script/main.js"></script>
+</body>
+
+</html>
