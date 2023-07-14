@@ -1,9 +1,10 @@
 "use strict";
-
 /**
  * Make the content editable
  */
 var editableContent = document.querySelectorAll(".col-1[contenteditable='true']");
+
+
 //add random values
 for (let i = 0; i < editableContent.length; i++) {
     editableContent[i].innerText = Math.floor(Math.random() * 100);

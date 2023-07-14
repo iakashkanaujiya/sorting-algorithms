@@ -47,28 +47,42 @@ body {
 #arr-data1>div {
     position: relative;
     border-radius: 10px;
-    width: 80px;
-    height: 80px;
-    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
     padding: 12px 0;
     color: #fff;
-    border: 1px solid #AA96DA;
+    border: 2px solid #AA96DA;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 1px 10px rgba(0, 0, 0, .2);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.col-1 {
-    /* Overwrite Bootstrap css */
-    margin: 20px 10px;
+/* Sort Button */
+.my-btn {
+    background-color: #DCD6F7;
+    border: .5px solid #AA96DA;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), inset 0 0px 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 80px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 1s linear;
+}
+
+.my-btn:hover {
+    transform: scale(1.05);
+    transition: transform 1s linear;
 }
 
 /* Display Mid under the Array Element */
 .mid::after {
     content: "Mid";
     position: absolute;
-    top: -30px;
-    left: 20px;
-    font-size: 16px;
+    top: -25px;
+    left: 15px;
+    font-weight: 400;
+    font-size: 14px;
     color: #000;
 }
 
@@ -78,16 +92,16 @@ body {
     transform: translateY(0);
     transition: background-color 0.5s ease, transform 0.5s ease;
 }
+
 .animation.show {
     background-color: #F6F6F6;
     color: #FFC7C7;
     transition: background-color 0.5s ease;
 }
 
-
 /* When create new array in Merge Sort */
 .temp-arr {
-    transform: translateY(168px);
+    transform: translateY(148px);
     transition: transform 1.5s linear;
 }
 
@@ -107,9 +121,10 @@ body {
 .pivot::after {
     content: "Pivot";
     position: absolute;
-    top: -30px;
-    left: 20px;
-    font-size: 16px;
+    top: -25px;
+    left: 13px;
+    font-size: 14px;
+    font-weight: 400;
     color: #000;
 }
 
@@ -118,23 +133,58 @@ body {
     content: "↑";
     color: #AA96DA;
     position: absolute;
-    left: 30px;
-    top: 70px;
+    font-size: 30px;
+    left: 22.5px;
+    top: 52px;
 }
 
-/* Sort Button */
-.my-btn {
-    background-color: #DCD6F7;
-    border: .5px solid #AA96DA;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), inset 0 0px 10px rgba(0, 0, 0, .2);
-    color: #fff;
-    font-size: 20px;
-    padding: 20px 80px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 1s linear;
-}
-.my-btn:hover {
-    transform: scale(1.05);
-    transition: transform 1s linear;
+/* @media (max-width: 768px) {
+
+    #col-6,
+    #col-7,
+    #col-8,
+    #col-9,
+    #col-10 {
+        display: none;
+        
+    }
+
+    #arr-data>div,
+    #arr-data1>div {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .my-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .arrow:before{
+        left: 20px;
+        top: 45px;
+        font-size: 25px;
+    }
+
+    .pivot::after{
+        font-size: 12px;
+        top: -20px;
+    }
+
+    .mid::after {
+        left: 12px;
+        font-size: 12px;
+        top: -20px;
+    }
+
+    .temp-arr {
+        transform: translateY(138px);
+        transition: transform 1.5s linear;
+    }
+} */
+
+.col-1 {
+    /* Overwrite Bootstrap css */
+    margin: 20px 5px;
 }
